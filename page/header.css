@@ -1,0 +1,178 @@
+ul { /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.drop-down-menu {
+/*         border-radius:5px; */
+/*         border: double; */
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Noto Sans TC', sans-serif;
+  font-weight:bold;
+}
+
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+  
+    border-right: #ccc 1px solid;
+}
+
+ul.drop-down-menu > li:last-child {
+    border-right: none;
+}
+
+ul.drop-down-menu > li {
+    float: left; /* 只有第一層是靠左對齊*/
+}
+
+ ul.drop-down-menu a {
+    background-color: 	#FFCC99;
+    color: #000000;
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+    background-color: 	#99CCFF;
+    color: #000000;
+}
+ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+    background-color:	#99CCFF;
+    color: #000000;
+}
+ul.drop-down-menu ul {
+    
+border-radius:5px;
+    border: double;
+    position: absolute;
+    z-index: 99;
+    left: -1px;
+    top: 100%;
+   min-width: 180px;
+}
+
+ul.drop-down-menu ul li {
+    border-bottom: #ccc 1px solid;
+}
+
+ul.drop-down-menu ul li:last-child {
+    border-bottom: none;
+}
+
+ul.drop-down-menu ul ul { /*第三層以後的選單出現位置與第二層不同*/
+    z-index: 999;
+    top: 10px;
+    left: 90%;
+}
+ul.drop-down-menu ul { /*隱藏次選單*/
+    display: none;
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    display: block;
+}
+.navbar-center {
+display: inline-block;
+float: none;
+vertical-align: bottom;
+
+}
+
+
+.navbar-collapse-center {
+text-align: center;
+
+}
+h1.one {
+text-align: left;
+color :#5A5AAD;
+font-family:Gill Sans, sans-serif;
+font-weight:bold;
+}
+h1.two {
+text-align: right;
+color :#5A5AAD;
+font-family: Arial;
+font-weight:bold;
+}
+
+.tltle{
+width:700px;
+margin:0 auto;
+
+}
+
+.menu{
+background-color: #FFFFCC;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {                                                          
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .container{
+    width: 900px;
+    margin: 0 auto;
+  }
+  .card{
+    /* 設定父親定位點 */
+    position: relative;
+    width: 270px;
+    float:left;
+    margin: 10px;
+  }
+  img.imgpic{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  
