@@ -1,0 +1,28 @@
+﻿body
+{
+    background-color:#808080;
+}
+
+
+p{
+    font-family:"Times New Roman";
+    color:white;
+    background-color:blue;
+    text-align:center;
+    
+}
+
+img{
+    display:block;
+    margin:auto;
+}
+
+h1{
+    color:black;
+    font-family:'Times New Roman';
+    text-align:center;
+}
+
+.first {
+    border-radius: 10px 0 0 10px;
+}
