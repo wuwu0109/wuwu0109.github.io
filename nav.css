@@ -92,3 +92,10 @@ body {
     height: 40px; /* 設定與文字同高 */
     width: auto; /* 保持圖片比例 */
 }
+
+@media (max-width: 991px) { /* 只在手機版啟用 */
+    .dropdown-menu {
+        max-height: 300px; /* 設定最大高度，避免超出畫面 */
+        overflow-y: auto; /* 啟用垂直捲動 */
+    }
+}
