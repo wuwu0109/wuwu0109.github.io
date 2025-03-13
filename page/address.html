@@ -15,6 +15,7 @@
     <link href="../nav.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/a4064d6002.js" crossorigin="anonymous"></script>
     <script src="page/home.js" crossorigin="anonymous"></script>
+    <script src="../address.js" ></script>
 
     <!-- Google 字體 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
@@ -146,7 +147,7 @@
           <div class="col-lg-8 col-md-12">
               <div class="contact-form">
                   <h4>家長回饋區</h4>
-                  <form action="https://formsubmit.co/wuwu01090109@gmail.com" method="POST">
+                  <form id="contactForm">
                     <div class="mb-3">
                         <label for="name" class="form-label">姓名</label>
                         <input type="text" class="form-control" name="name" required>
@@ -159,13 +160,15 @@
                         <label for="message" class="form-label">訊息</label>
                         <textarea class="form-control" name="message" rows="4" required></textarea>
                     </div>
-                  
+                
                     <!-- 🔹 隱藏欄位：避免機器人發送垃圾郵件 -->
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="感謝您的回饋.html"> <!-- 送出後跳轉的頁面 -->
                     
                     <button type="submit" class="btn btn-primary w-100">送出訊息</button>
-                  </form>
+                </form>
+                
+                <!-- 顯示回饋訊息 -->
+                <div id="responseMessage" class="alert mt-3" style="display: none;"></div>
                   
               </div>
           </div>
@@ -178,6 +181,9 @@
     <footer class="text-center mt-4 py-3" >
         <p>© 2025 員林田中區兒童發展社區</p>
     </footer>
+
+
+
 
 </body>
 </html>
