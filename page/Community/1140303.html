@@ -161,11 +161,11 @@
 </div>
 
 <script>
-function loadImages(galleryId, imageFolder, imageCount) {
+function loadImagesWithPlaceholder(galleryId, imageFolder, imageCount) {
   const gallery = document.getElementById(galleryId);
   for (let i = 1; i <= imageCount; i++) {
       let colDiv = document.createElement("div");
-      colDiv.className = "col-lg-3 col-md-6 col-12"; // RWD 讓桌機 4 張、平板 2 張、手機 1 張
+      colDiv.className = "col-lg-3 col-md-6 col-12";
 
       let imgLink = document.createElement("a");
       imgLink.href = "#";
@@ -174,8 +174,9 @@ function loadImages(galleryId, imageFolder, imageCount) {
       imgLink.setAttribute("onclick", `showImage('${imageFolder}${i}.jpg')`);
 
       let img = document.createElement("img");
-      img.src = `${imageFolder}${i}.jpg`; // 設定圖片路徑
-      img.className = "img-fluid my-2";
+      img.src = `${imageFolder}low-res-${i}.jpg`; // 先載入低解析度圖片
+      img.setAttribute("data-src", `${imageFolder}${i}.jpg`); // 真正的高清圖片
+      img.className = "img-fluid my-2 lazyload";
       img.alt = `圖片 ${i}`;
 
       imgLink.appendChild(img);
@@ -184,9 +185,20 @@ function loadImages(galleryId, imageFolder, imageCount) {
   }
 }
 
-// 📌 載入兩組圖片
-loadImages("imageGallery1", "../../photo/community/1140303/1/", 58); // 第一組圖片來自 images1 資料夾
-loadImages("imageGallery2", "../../photo/community/1140303/2/", 23); // 第二組圖片來自 images2 資料夾
+// 啟用真正的圖片載入
+document.addEventListener("DOMContentLoaded", function () {
+  let lazyImages = document.querySelectorAll(".lazyload");
+  lazyImages.forEach(img => {
+    let highResSrc = img.getAttribute("data-src");
+    img.onload = () => img.removeAttribute("data-src"); // 低解析度載入後移除
+    img.src = highResSrc; // 替換成高清圖片
+  });
+});
+
+// 載入圖片
+loadImagesWithPlaceholder("imageGallery1", "../../photo/community/1140303/1/", 58);
+loadImagesWithPlaceholder("imageGallery2", "../../photo/community/1140303/2/", 23);
+
 
 </script>
 
