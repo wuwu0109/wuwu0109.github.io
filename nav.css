@@ -99,3 +99,10 @@ body {
         overflow-y: auto; /* 啟用垂直捲動 */
     }
 }
+
+@media (max-width: 1024px) { /* 限制在平板與手機 */
+    .dropdown-menu {
+        max-height: 300px; /* 設定最大高度，避免超出畫面 */
+        overflow-y: auto; /* 啟用垂直捲動 */
+    }
+}
