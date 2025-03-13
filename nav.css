@@ -1,0 +1,94 @@
+.navbar .nav-link {
+    color: black !important; /* 讓選單文字變白色 */
+    font-size: 20PX;
+    
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* 修改下拉選單的字體顏色 */
+.navbar .dropdown-menu .dropdown-item {
+    color: black !important; /* 讓下拉選單內的文字變黑色 */
+    background-color: #C4E1FF;
+}
+
+/* 當滑鼠移到選單時變色 */
+.navbar .nav-link:hover,
+.navbar .dropdown-menu .dropdown-item:hover {
+    color: black!important; /* 滑鼠懸停時變金黃色 */
+}
+
+.navbar .dropdown-menu {
+background-color: #C4E1FF !important; /* 設定下拉選單背景顏色 */
+width: 100%; /* 讓選單填滿父層 */
+left: 0; /* 對齊選單開頭 */
+right: 0; /* 避免留白 */
+font-family: 'Noto Sans TC', sans-serif;
+border-radius:5px;
+border: double;
+position: absolute;
+z-index: 99;
+left: -1px;
+top: 100%;
+min-width: 250px;
+
+}
+
+/* 🔹 讓選單的每個項目也填滿背景 */
+.navbar .dropdown-menu .dropdown-item {
+color: black !important; /* 文字顏色 */
+padding: 10px 20px; /* 內邊距 */
+}
+
+/* 🔹 當滑鼠懸停時，背景顏色填滿 */
+.navbar .dropdown-menu .dropdown-item:hover {
+background-color: rgb(164, 255, 184) !important; /* 滑鼠懸停時變深藍色 */
+width: 100%; /* 讓 hover 時背景也填滿 */
+}
+
+.navbar-toggler {
+background-color: white !important; /* 背景變黑 */
+border-color: black !important; /* 按鈕邊框變黑 */
+}
+
+/* 修改漢堡選單內的「三條線」顏色 */
+.navbar-toggler-icon {
+filter: invert(100%); /* 讓白色的圖示變黑色 */
+}
+
+footer{
+background-color: #C4E1FF;
+font-size: 30PX;
+font-family: 'Noto Sans TC', sans-serif;
+margin-top: 0 !important;
+}
+
+nav{
+    background-color: #C4E1FF;
+    
+}
+
+.navbar {
+    position: fixed; /* 固定在畫面頂部 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 讓導覽列寬度填滿 */
+    z-index: 1000; /* 確保導覽列在最上層 */
+    background-color: #C4E1FF; /* 設定背景顏色，避免透明 */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 添加陰影，提升層次感 */
+}
+
+/* 🔹 確保內容區塊不會被 nav 擋住 */
+body {
+    padding-top: 70px; /* 根據 nav 高度調整 */
+}
+
+.nav-img-link {
+    display: flex;
+    align-items: center;
+    margin-left: 15px; /* 與文字間距 */
+}
+
+.nav-img {
+    height: 40px; /* 設定與文字同高 */
+    width: auto; /* 保持圖片比例 */
+}

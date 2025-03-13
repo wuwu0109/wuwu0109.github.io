@@ -1,155 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>員林田中區兒童發展社區</title>
-            <!-- CSS only -->
-            <!-- JavaScript Bundle with Popper -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+    <!-- 🔹 加入 Bootstrap 5 讓網站支援 RWD -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-            <link href="/page/header.css" rel="stylesheet" type="text/css">
-            <script src="https://kit.fontawesome.com/a4064d6002.js" crossorigin="anonymous"></script>
-            <script src="/page/home.js" crossorigin="anonymous"></script>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
-            <style type="text/css">
-                .navbar-center {
-                display: inline-block;
-                float: none;
-                vertical-align: top;
-              }
-              .navbar-collapse-center {
-                text-align: center;
-              }
-              .imgback{
-                  background-color: #FFFFCC;
-                  width:auto;
-                height: 500px;
-                display:block; 
-                margin:auto;
-              }
-              .imgpic{
-                display:block; 
-                margin:auto;
-              }
-              
-              
-  .card{
-    /* 設定父親定位點 */
-    position: relative;
-    width: 270px;
-    float:left;
-    margin: 10px;
-  }
-  .carousel .carousel-item {
-  height: 350px;
-}
 
-.carousel .carousel-item img {
-  min-height: 100px;
-  max-height: 400px;
-  object-fit: cover;
+    <!-- 其他 CSS & JS -->
+    <link href="page/header.css" rel="stylesheet" type="text/css">
+    <link href="nav.css" rel="stylesheet" type="text/css">
+    <link href="img.css" rel="stylesheet" type="text/css">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/a4064d6002.js" crossorigin="anonymous"></script>
 
-}
-.container{
-    display: flex;
+    <script src="page/home.js" crossorigin="anonymous"></script>
+
+    <!-- Google 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
+
     
-    
-}
-.box{
-        margin: auto;
-    }
 
-    .container1{
-        display: flex;
-        width: 600px;
-    margin: 0 auto;
-    }
-
-    .container2{
-        display: flex;
-        width: 300px;
-    margin: 0 auto;
-    }
-
-    article {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-  background-color: #45a1ff;
-  color: #fff;
-}
-              </style>
 </head>
-<body class="menu">
-  
-        <header class="menu">
-        <div class="navbar-collapse-center ">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1"><span class="navbar-toggler-icon" ></span></button>
-          <ul class="drop-down-menu navbar-center " id="navbar1">
-          <li><a href="page/home.html">首頁</a>    
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark "  >
+    <div class="container" >
+        <a class="navbar-brand" href="index.html" style="color: black; font-size: 30PX;font-family: 'Noto Sans TC', sans-serif;" >員林田中區兒童發展社區</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+
+                <!-- 🔹 第一層選單：社區融合（含第二層） -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="communityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        社區融合
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+                        <li><a class="dropdown-item" href="page/Community/1140303.html">114.03.03(一) 採莓趣味</a></li>
+                        <li><a class="dropdown-item" href="page/Community/1140328.html">114.03.28(五) 採芭樂趣</a></li>
+                        <li><a class="dropdown-item" href="page/Community/1140425.html">114.04.25(五) 芒果青製作</a></li>
+                        <li><a class="dropdown-item" href="page/Community/1140515.html">114.05.15(四) 吊牌設計師</a></li>
+                        <li><a class="dropdown-item" href="page/Community/1140521.html">114.05.21(二) 龍貓音樂盒</a></li>
+                        <li><a class="dropdown-item" href="page/Community/1140613.html">114.06.13(五) 就愛做果醬</a></li>
+                        <li><a class="dropdown-item" href="page/Community/1140618.html">114.06.18(三) 就皂這樣</a></li>
+                        <li><a class="dropdown-item" href="page/Community/1140708.html">114.07.08(二) 擴香石趣味營</a></li>
+                    </ul>
                 </li>
-                
-            <li><a href="page/teacher.html">老師樂園</a>
+
+                <!-- 🔹 第一層選單：親子活動（含第二層） -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="parentChildDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        親子活動
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="parentChildDropdown">
+                        <li><a class="dropdown-item" href="page/parent-child/1140304.html">114.03.04 採茶小農夫</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140305.html">114.03.05 皂就幸福</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140311.html">114.03.11 好多好吃的草莓</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140401.html">114.04.01 山洞爬爬樂</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140506.html">114.05.06 腿上功夫</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140513.html">114.05.13 愛刷牙的好寶寶</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140603.html">114.06.03 獨木橋行走</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140607.html">114.06.07 和孩子玩出注意力</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140624.html">114.06.24 愛刷牙的好寶寶</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140703.html">114.07.03 泡泡飛呀飛</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140715turtle.html">114.07.15 超級忍者龜</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140715fire.html">114.07.15 小小消防員</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140722.html">114.07.22 小鴨呱呱</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140724.html">114.07.24 玉米娃娃</a></li>
+                    </ul>
                 </li>
-                <li><a href="page/graduate.html">畢業的寶貝們</a>  
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="parentChildDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        親子活動(8月後)
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="parentChildDropdown">
+                        <li><a class="dropdown-item" href="page/parent-child/1140805.html">114.08.05 我是土撥鼠</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140819.html">114.08.19 時鐘王國</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140821.html">114.08.21 熱縮片變身</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140902.html">114.09.02 超級大熱狗</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140909.html">114.09.09 會發光的燈籠魚</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1140913.html">114.09.13 我的顏色</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1141007.html">114.10.07 小猴子爬爬</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1141016.html">114.10.16 熱縮片變身</a></li>
+                        <li><a class="dropdown-item" href="page/parent-child/1141104.html">114.11.04 曬衣服</a></li>
+                    </ul>
                 </li>
-                <li><a href="page/picture.html">寶貝們的照片</a>
-                    <ul>
-                        <li><a href="page/unitcla.html">單元課</a></li>
-                          <li><a href="page/gymcla.html">體能課</a> </li>
-                          <li><a href="page/teamcla.html">小組課程</a></li>
-                          <li><a href="page/cmycla.html">社區適應</a>
-                          </li>
-                          <li><a href="page/outcla.html">戶外教學</a>
-                          </li>
-                          <li><a href="page/beautycla.html">美勞課</a>
-                          </li>
-                          <li><a href="page/rhycla.html">律動課</a>
-                          </li>
-                          <li><a href="page/lunchcla.html">午餐/點心</a>
-                          </li>
-                      </ul>
-                </li>
-                <li><a href="page/homegraduate.html">到宅畢業典禮</a>
-                </li>
-                <li><a href="page/graduatevideo.html">畢業影片</a>
-                </li>
-            <li><a href="page/address.html">我們的校園</a>
-                </li>
+
+                <li class="nav-item"><a class="nav-link" href="page/address.html">家長回饋區</a></li>
             </ul>
+            <a href="https://www.facebook.com/yuanlinchild" target="_blank" class="nav-img-link">
+                <img src="photo/icon/fb.png" alt="圖片連結" class="nav-img">
+            </a>
         </div>
-          </header>
+    </div>
+</nav>
 
 
-          <article>
-            
-            <img style="display: block; margin: 20px 50px;" width="500px" height="700px" src="photo/index/113年宣導單張.png">
-         
-            
-            <footer>
-              <p>© 2018 Gandalf</p>
-            </footer>
-          </article>
-          
-          
-        
-        
-          
-            
-    
-        
-    
-       
+    <div class="image-section">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <!-- 圖片區塊 -->
+                <div class="col-lg-6 col-md-12 text-center">
+                    <img class="img-fluid " style="min-width: 350px; max-height: 700PX; " src="113年宣導單張.png" alt="宣導單張">
+                </div>
+                
+                <!-- 文字方塊 -->
+                <div class="col-lg-6 col-md-12 text-center">
+                    <div class="text-box">
+                        <h2>活動介紹</h2>
+                        <p>這是關於本活動的簡介，你可以在這裡輸入更多資訊，例如活動日期、地點，或其他重要資訊。</p>
+                        <p>這是關於本活動的簡介，你可以在這裡輸入更多資訊，例如活動日期、地點，或其他重要資訊。</p>
+                        <p>這是關於本活動的簡介，你可以在這裡輸入更多資訊，例如活動日期、地點，或其他重要資訊。</p>
+                        <p>這是關於本活動的簡介，你可以在這裡輸入更多資訊，例如活動日期、地點，或其他重要資訊。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 🔹 頁尾 -->
+    <footer class="text-center mt-4 py-3" >
+        <p>© 2025 員林田中區兒童發展社區</p>
+        <p>此網頁僅供參加活動的家長使用</p>
+    </footer>
+
 </body>
-        
 </html>
