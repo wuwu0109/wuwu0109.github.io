@@ -3,15 +3,6 @@
     white-space: nowrap; /* 避免文字換行 */
 }
 
-.dropdown-menu {
-    min-width: auto !important; /* 讓寬度自動適應內容 */
-    width: auto !important; /* 讓選單寬度根據內容變化 */
-}
-
-.dropdown-item {
-    white-space: nowrap !important; /* 避免換行 */
-}
-
 .navbar .nav-link {
     color: black !important; /* 讓選單文字變白色 */
     font-size: 20PX;
