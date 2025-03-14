@@ -36,7 +36,7 @@ min-width: 280px;
 /* 🔹 讓選單的每個項目也填滿背景 */
 .navbar .dropdown-menu .dropdown-item {
 color: black !important; /* 文字顏色 */
-padding: 10px 20px; /* 內邊距 */
+padding: 10px 30px; /* 內邊距 */
 }
 
 /* 🔹 當滑鼠懸停時，背景顏色填滿 */
