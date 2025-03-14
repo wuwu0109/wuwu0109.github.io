@@ -34,7 +34,10 @@ position: absolute;
 z-index: 99;
 left: -1px;
 top: 100%;
-min-width: 380px;
+width: 100%; /* 讓選單寬度適應內容 */
+max-width: 300px; /* 限制最大寬度，避免過寬 */
+word-wrap: break-word; /* 讓長文字自動換行 */
+white-space: normal !important;
 
 }
 
