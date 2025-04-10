@@ -17,6 +17,25 @@
     <!-- Google 字體 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
 
+    <script>
+        window.onload = function(){
+            if (!localStorage.getItem("authneticated")){
+                let password;
+                const correctPassword = "25201799";
+
+                while(true){
+                    password = prompt("請輸入活動提供密碼:");
+                    if(password === correctPassword){
+                        localStorage.setItem("authneticated", "true");
+                        break;
+                    } else{
+                        alert("密碼輸入錯誤，請確認後再輸入!");
+                    }
+                }
+            }
+        }
+    </script>
+
     
 
 </head>
